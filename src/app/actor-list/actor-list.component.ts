@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActorListService } from './actor-list.service';
+import {ActivatedRoute} from '@angular/router'
 
 @Component({
   selector: 'app-actor-list',
@@ -9,16 +10,27 @@ import { ActorListService } from './actor-list.service';
 export class ActorListComponent implements OnInit {
 
   actors;
-  showDetails;
+  showDetails:boolean=false;
 
-  constructor(private actorlistservice:ActorListService) { }
+  constructor(private actorlistservice:ActorListService,private route:ActivatedRoute) { }
 
   ngOnInit(): void {
 
-    this.actorlistservice.getActorList()
-    .subscribe(actors => {
-      this.actors = actors;
-    })
+    this.route.queryParams.subscribe(
+      qps=>{
+        if(!!qps.showDetails)
+        {
+          this.showDetails=true;
+        }
+        else{
+          this.showDetails=false;
+        }    
+        this.actorlistservice.getActorList()
+        .subscribe(actors => {
+          this.actors = actors;
+        })
+      }
+    )
     
   }
 
