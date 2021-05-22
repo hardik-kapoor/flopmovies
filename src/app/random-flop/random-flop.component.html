@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<h1 class="main_head">Flop Chooser</h1>
+
+<div class="firstDiv" >
+  <h3>Which movie has Lower IMDB rating?</h3>
+  <button (click)="playAgain()" [hidden]="!isPlayed" class="btn btn-primary">Play Again</button>
+</div>
+
+<app-text-show [isHidden]="isPlayed" [inputString]="showString"></app-text-show>
+
+<div class="showImages">
+  <app-image-show (clickImage)="imageClicked(0)" [index]="ind[0]" [flopList]="flopData" [isPlayed]="isPlayed"></app-image-show>
+  <app-image-show (clickImage)="imageClicked(1)" [index]="ind[1]" [flopList]="flopData" [isPlayed]="isPlayed"></app-image-show>
+</div>
+
+
+
+
+

@@ -9,13 +9,19 @@ import { AppComponent } from './app.component';
 import { Error404Component } from './error404/error404.component';
 import { ActorListComponent } from './actor-list/actor-list.component';
 import { ActorEditComponent } from './actor-edit/actor-edit.component';
+import { RandomFlopComponent } from './random-flop/random-flop.component';
+import { ImageShowComponent } from './image-show/image-show.component';
+import { TextShowComponent } from './text-show/text-show.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     Error404Component,
     ActorListComponent,
-    ActorEditComponent
+    ActorEditComponent,
+    RandomFlopComponent,
+    ImageShowComponent,
+    TextShowComponent
   ],
   imports: [
     BrowserModule,

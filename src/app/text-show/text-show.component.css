@@ -1,0 +1,12 @@
+h2{
+    font:"merriweather";
+    font-size: larger;
+    text-align: center;
+}
+
+.showText{
+    background-color: cadetblue;
+    margin-top: 1%;
+    float:center;
+    display:flex; justify-content:space-around;
+}

@@ -1,0 +1,19 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.mainDiv{
+    float:left;
+    margin-left:20%;
+    margin-top:5%;
+    padding:4%;
+    margin-right:5%;
+}
+
+img:hover {
+    cursor: pointer;
+}
+.textDiv{
+    width: 100%;
+    font: leto;
+    font-size: medium;
+    text-align: center;
+}
