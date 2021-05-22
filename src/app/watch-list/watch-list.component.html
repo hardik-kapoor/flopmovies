@@ -1,0 +1,8 @@
+<h3 class="mb-3 p-3"> Flops Watch List</h3>
+
+<div>
+  <app-watch-list-item *ngFor="let item of watchList | slice:0:end ;index as i"
+  [item]="item" [istop]="i==0" [isbottom]="i==5" (goU)="goUp(i)" (goD)="goDown(i)"
+  ></app-watch-list-item>
+  <button *ngIf="end==4" class="btn btn-primary" (click)="showAllClick()">Show All</button>
+</div>

@@ -12,6 +12,8 @@ import { ActorEditComponent } from './actor-edit/actor-edit.component';
 import { RandomFlopComponent } from './random-flop/random-flop.component';
 import { ImageShowComponent } from './image-show/image-show.component';
 import { TextShowComponent } from './text-show/text-show.component';
+import { WatchListComponent } from './watch-list/watch-list.component';
+import { WatchListItemComponent } from './watch-list-item/watch-list-item.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { TextShowComponent } from './text-show/text-show.component';
     ActorEditComponent,
     RandomFlopComponent,
     ImageShowComponent,
-    TextShowComponent
+    TextShowComponent,
+    WatchListComponent,
+    WatchListItemComponent
   ],
   imports: [
     BrowserModule,
