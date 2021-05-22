@@ -10,13 +10,11 @@ import { WATCH_LIST } from '../../assets/data'
 export class WatchListComponent implements OnInit {
 
   watchList=WATCH_LIST;
-  title=this.watchList.length+' items';
   end:number=4;
 
   constructor(private titleService: Title){}
 
   ngOnInit(){
-    this.titleService.setTitle(this.title);
   }
   swap(index1:number,index2:number)
   {
